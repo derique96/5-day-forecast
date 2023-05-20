@@ -35,20 +35,26 @@ function cityApi(lat, lon) {
 }
 
 function fiveDay(data) {
-  var rightSide = document.getElementById('right-side');
   for(var i = 0; i < data.list.length; i += 8) {
-    console.log(data.list[i]);
+    console.log(data.list[i]);    
+    
+    var rightSide = document.getElementById('right-side');
     var headerOne = document.createElement('div');
     var weather = document.createElement('div');
     var weatherBody = document.createElement('div');
+
     headerOne.classList.add('header');
     weather.classList.add('card');
+
+
+
     headerOne.textContent = data.list[i].dt_txt.substring(0,11);
     weatherBody.textContent = data.list[i].main.temp;
+
+    
+    rightSide.appendChild(weather);    
     weather.appendChild(weatherBody);
     weather.appendChild(headerOne);
-    rightSide.appendChild(weather);
-    
 
   }
 }

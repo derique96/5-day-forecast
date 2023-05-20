@@ -12,5 +12,9 @@ h1 {
     padding: 15px 0;
 }
 .right-side {
-    flex:65%;
+}
+
+
+.weather {
+    align-content: flex-start;
 }
