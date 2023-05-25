@@ -8,7 +8,7 @@ var dayFive = document.getElementById("card-5");
 
 function weatherDisplay() {
   var city = document.getElementById("citySearch").value;
-  var url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=049e3cef61e3ece1b6e80fbf3023437c`;
+  var url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=049e3cef61e3ece1b6e80fbf3023437c`;
 
 
   fetch(url)
@@ -22,7 +22,7 @@ function weatherDisplay() {
 }
 
 function cityApi(lat, lon) {
-  var cityApi = `http://api.openweathermap.org/data/2.5/forecast?units=imperial&lat=${lat}&lon=${lon}&appid=049e3cef61e3ece1b6e80fbf3023437c`;
+  var cityApi = `https://api.openweathermap.org/data/2.5/forecast?units=imperial&lat=${lat}&lon=${lon}&appid=049e3cef61e3ece1b6e80fbf3023437c`;
 
   fetch(cityApi)
     .then(function (response) {
